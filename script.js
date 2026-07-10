@@ -491,3 +491,42 @@ console.log(
     "%c Aman Suman Portfolio Loaded",
     "color:#a855f7;font-size:18px;font-weight:bold;"
 );
+
+//================ FOOTER ================
+
+// Scroll To Top Button
+
+const scrollBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        scrollBtn.style.display = "flex";
+
+    }
+
+    else{
+
+        scrollBtn.style.display = "none";
+
+    }
+
+});
+
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+// Current Year
+
+document.querySelector(".footer-bottom p").innerHTML =
+`© ${new Date().getFullYear()} Aman Suman | All Rights Reserved`;
